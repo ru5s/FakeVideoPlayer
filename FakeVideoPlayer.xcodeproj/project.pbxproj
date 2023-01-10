@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B56BE0C42965831900BC0A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0C32965831900BC0A8B /* AppDelegate.swift */; };
 		B56BE0C62965831900BC0A8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0C52965831900BC0A8B /* SceneDelegate.swift */; };
-		B56BE0C82965831900BC0A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0C72965831900BC0A8B /* ViewController.swift */; };
-		B56BE0CB2965831900BC0A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56BE0C92965831900BC0A8B /* Main.storyboard */; };
 		B56BE0CD2965831B00BC0A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56BE0CC2965831B00BC0A8B /* Assets.xcassets */; };
 		B56BE0D02965831B00BC0A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56BE0CE2965831B00BC0A8B /* LaunchScreen.storyboard */; };
+		B56BE0D8296583A400BC0A8B /* ListOfVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0D7296583A400BC0A8B /* ListOfVideoTVC.swift */; };
+		B56BE0DA2965843F00BC0A8B /* ListOfVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0D92965843F00BC0A8B /* ListOfVideoCell.swift */; };
+		B56BE0DC29658A0700BC0A8B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE0DB29658A0700BC0A8B /* Model.swift */; };
+		B56BE104296B462600BC0A8B /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BE103296B462600BC0A8B /* VideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B56BE0C02965831900BC0A8B /* FakeVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56BE0C32965831900BC0A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56BE0C52965831900BC0A8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B56BE0C72965831900BC0A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B56BE0CA2965831900BC0A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B56BE0CC2965831B00BC0A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B56BE0CF2965831B00BC0A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56BE0D12965831B00BC0A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56BE0D7296583A400BC0A8B /* ListOfVideoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfVideoTVC.swift; sourceTree = "<group>"; };
+		B56BE0D92965843F00BC0A8B /* ListOfVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfVideoCell.swift; sourceTree = "<group>"; };
+		B56BE0DB29658A0700BC0A8B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B56BE103296B462600BC0A8B /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				B56BE0C32965831900BC0A8B /* AppDelegate.swift */,
 				B56BE0C52965831900BC0A8B /* SceneDelegate.swift */,
-				B56BE0C72965831900BC0A8B /* ViewController.swift */,
-				B56BE0C92965831900BC0A8B /* Main.storyboard */,
+				B56BE0D7296583A400BC0A8B /* ListOfVideoTVC.swift */,
 				B56BE0CC2965831B00BC0A8B /* Assets.xcassets */,
 				B56BE0CE2965831B00BC0A8B /* LaunchScreen.storyboard */,
 				B56BE0D12965831B00BC0A8B /* Info.plist */,
+				B56BE0D92965843F00BC0A8B /* ListOfVideoCell.swift */,
+				B56BE0DB29658A0700BC0A8B /* Model.swift */,
+				B56BE103296B462600BC0A8B /* VideoPlayer.swift */,
 			);
 			path = FakeVideoPlayer;
 			sourceTree = "<group>";
@@ -127,7 +133,6 @@
 			files = (
 				B56BE0D02965831B00BC0A8B /* LaunchScreen.storyboard in Resources */,
 				B56BE0CD2965831B00BC0A8B /* Assets.xcassets in Resources */,
-				B56BE0CB2965831900BC0A8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +143,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56BE0C82965831900BC0A8B /* ViewController.swift in Sources */,
+				B56BE0D8296583A400BC0A8B /* ListOfVideoTVC.swift in Sources */,
 				B56BE0C42965831900BC0A8B /* AppDelegate.swift in Sources */,
+				B56BE104296B462600BC0A8B /* VideoPlayer.swift in Sources */,
+				B56BE0DC29658A0700BC0A8B /* Model.swift in Sources */,
 				B56BE0C62965831900BC0A8B /* SceneDelegate.swift in Sources */,
+				B56BE0DA2965843F00BC0A8B /* ListOfVideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B56BE0C92965831900BC0A8B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B56BE0CA2965831900BC0A8B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B56BE0CE2965831B00BC0A8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +292,6 @@
 				INFOPLIST_FILE = FakeVideoPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +301,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uz.IsmailovRuslan.FakeVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +322,6 @@
 				INFOPLIST_FILE = FakeVideoPlayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +331,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uz.IsmailovRuslan.FakeVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
