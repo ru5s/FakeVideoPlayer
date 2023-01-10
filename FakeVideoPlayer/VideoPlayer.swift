@@ -34,7 +34,7 @@ class VideoPlayer: UIViewController {
     let playAction: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("Play".uppercased(), for: .normal)
+        btn.setTitle("Pause".uppercased(), for: .normal)
         btn.layer.cornerRadius = 35
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = .red
@@ -115,8 +115,16 @@ class VideoPlayer: UIViewController {
     @objc private func playAction(sender: Any) {
         if player.timeControlStatus == .playing {
             player.pause()
+            DispatchQueue.main.async {
+                self.playAction.setTitle("Play".uppercased(), for: .normal)
+            }
+            
         }else{
             player.play()
+            DispatchQueue.main.async {
+                self.playAction.setTitle("Pause".uppercased(), for: .normal)
+            }
+            
         }
     }
 
@@ -128,7 +136,7 @@ class VideoPlayer: UIViewController {
         layer.videoGravity = .resizeAspectFill
         layer.frame = videoView.bounds
         videoView.layer.addSublayer(layer)
-        
+        player.play()
     }
 }
 
